@@ -10,6 +10,8 @@
 		103731E21547945D00E1A831 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103731E11547945D00E1A831 /* Foundation.framework */; };
 		103731E51547945E00E1A831 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 103731E41547945E00E1A831 /* main.m */; };
 		103731E91547945E00E1A831 /* S.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 103731E81547945E00E1A831 /* S.1 */; };
+		103731F11547950900E1A831 /* ContactRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 103731F01547950900E1A831 /* ContactRecord.m */; };
+		103731F41547954C00E1A831 /* ContactDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 103731F31547954C00E1A831 /* ContactDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +31,12 @@
 		103731DD1547945D00E1A831 /* S */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = S; sourceTree = BUILT_PRODUCTS_DIR; };
 		103731E11547945D00E1A831 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		103731E41547945E00E1A831 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		103731E71547945E00E1A831 /* S-Prefix.pch */ = {isa = PBXFileReference; path = "S-Prefix.pch"; sourceTree = "<group>"; };
+		103731E71547945E00E1A831 /* S-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "S-Prefix.pch"; sourceTree = "<group>"; };
 		103731E81547945E00E1A831 /* S.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = S.1; sourceTree = "<group>"; };
+		103731EF1547950900E1A831 /* ContactRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactRecord.h; sourceTree = "<group>"; };
+		103731F01547950900E1A831 /* ContactRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactRecord.m; sourceTree = "<group>"; };
+		103731F21547954C00E1A831 /* ContactDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDatabase.h; sourceTree = "<group>"; };
+		103731F31547954C00E1A831 /* ContactDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,10 @@
 			children = (
 				103731E41547945E00E1A831 /* main.m */,
 				103731E81547945E00E1A831 /* S.1 */,
+				103731F21547954C00E1A831 /* ContactDatabase.h */,
+				103731F31547954C00E1A831 /* ContactDatabase.m */,
+				103731EF1547950900E1A831 /* ContactRecord.h */,
+				103731F01547950900E1A831 /* ContactRecord.m */,
 				103731E61547945E00E1A831 /* Supporting Files */,
 			);
 			path = S;
@@ -114,7 +124,7 @@
 		103731D41547945D00E1A831 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 103731D71547945D00E1A831 /* Build configuration list for PBXProject "S" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -139,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				103731E51547945E00E1A831 /* main.m in Sources */,
+				103731F11547950900E1A831 /* ContactRecord.m in Sources */,
+				103731F41547954C00E1A831 /* ContactDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +162,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -164,6 +180,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -176,6 +193,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -184,6 +205,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
@@ -227,6 +249,7 @@
 				103731EE1547945E00E1A831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
